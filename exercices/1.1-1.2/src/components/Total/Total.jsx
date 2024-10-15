@@ -1,10 +1,6 @@
 /* eslint-disable react/prop-types */
-const Total = (props) => {
-    return (
-      <p>
-        Number of exercises {props.number1 + props.number2 + props.number3}
-      </p>
-    )
-  }
+const Total = ({ total }) => {
+  return <p>Number of exercises {total}</p>;
+};
 
 export default Total
