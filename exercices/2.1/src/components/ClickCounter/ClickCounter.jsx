@@ -1,13 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-const ClickCounter = ({title, message}) => {
+const ClickCounter = ({title, message, mouseHover}) => {
     const [count, setCount] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div className="card">
             <h2>{title}</h2>
-            <button onClick={() => setCount((count) => count + 1)}>
+            <p>{isHovered ? mouseHover : ""}</p>
+            <button onClick={() => setCount((count) => count + 1)} 
+            onMouseEnter={() => setIsHovered(!isHovered)} onMouseLeave={() => setIsHovered(!isHovered)}>
                 count is {count}
             </button>
             <p>{count >= 10 ? message : ""}</p>
