@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Liste des couleurs et du texte associé
 const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
